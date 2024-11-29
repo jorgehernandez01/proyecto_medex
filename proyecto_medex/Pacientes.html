@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medex - Registro de Pacientes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Medex</a>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+        <h2 class="mb-4">Registro de Pacientes</h2>
+        <form>
+            <!-- Información personal -->
+            <div class="mb-3">
+                <label for="medicName" class="form-label">Nombre del Paciente</label>
+                <input type="text" id="medicName" class="form-control" placeholder="Ej. Juan" required>
+            </div>
+            <div class="mb-3">
+                <label for="lastName" class="form-label">Apellido Paterno</label>
+                <input type="text" id="lastName" class="form-control" placeholder="Ej. Pérez" required>
+            </div>
+            <div class="mb-3">
+                <label for="secondLastName" class="form-label">Apellido Materno</label>
+                <input type="text" id="secondLastName" class="form-control" placeholder="Ej. López" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="dateOfBirth" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" id="dateOfBirth" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="gender" class="form-label">Género</label>
+                <select id="gender" class="form-select" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="male">Masculino</option>
+                    <option value="female">Femenino</option>
+                    <option value="other">Otro</option>
+                </select>
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="mb-3">
+                <label for="phone" class="form-label">Teléfono</label>
+                <input type="tel" id="phone" class="form-control" placeholder="Ej. +52 123 456 7890" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" id="email" class="form-control" placeholder="Ej. paciente@email.com">
+            </div>
+
+            <div class="mb-3">
+                <label for="address" class="form-label">Dirección</label>
+                <textarea id="address" class="form-control" rows="2" placeholder="Calle, número, colonia, ciudad"></textarea>
+            </div>
+
+            <!-- Información médica -->
+            <div class="mb-3">
+                <label for="bloodType" class="form-label">Tipo de Sangre</label>
+                <select id="bloodType" class="form-select">
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="allergies" class="form-label">Alergias</label>
+                <textarea id="allergies" class="form-control" rows="2" placeholder="Especifica las alergias conocidas"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="notes" class="form-label">Notas Médicas Adicionales</label>
+                <textarea id="notes" class="form-control" rows="3" placeholder="Información relevante sobre el paciente"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
